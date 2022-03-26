@@ -1,18 +1,18 @@
 import { IsEmail, IsString, IsUUID } from "class-validator";
 
 export class AccountIdDto {
-    @IsUUID(4, { message: 'id不正确' })
+    @IsUUID(4, { message: 'ID invalid' })
     accountId: string;
 }
 
 export class CreateAccountDto {
-    @IsString()
+    @IsString({ message: 'Invalid username' })
     username: string;
 
-    @IsString()
+    @IsString({ message: 'Invalid password' })
     password: string;
 
-    @IsEmail({}, { message: '请输入正确的邮箱' })
+    @IsEmail({}, { message: 'Invalid email' })
     email: string;
 }
 

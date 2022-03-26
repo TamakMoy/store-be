@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable } from "@nestjs/common";
 import { CreateAccountDto } from "./dto/account.dto";
 import { AccountRepository } from "./account.repository";
-import { Pagination } from "../model/pagination.model";
+import { Pagination } from "../../model/pagination.model";
 import { PaginationDto } from "./dto/pagination.dto";
 
 @Injectable()
